@@ -15,7 +15,7 @@ public class ReverseController {
         this.reverseService = reverseService;
     }
 
-    @GetMapping("/reverse/")
+    @GetMapping("/reverse")
     public ResponseEntity<String> getReversedString(@RequestParam String inputData) {
         var reversedData = reverseService.reverseData(inputData);
         return ResponseEntity.ok(reversedData);
